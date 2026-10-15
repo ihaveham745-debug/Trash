@@ -21,5 +21,10 @@ python3 -m http.server 8000
 
 Приложение подключает `telegram-web-app.js`: в Telegram оно разворачивается на весь экран, использует системную кнопку «Назад» и виброотклик.
 
-1. Опубликуйте `index.html` по HTTPS (например, GitHub Pages: Settings → Pages → ветка с файлом).
-2. В [@BotFather](https://t.me/BotFather): `/newapp` (или `/mybots` → Bot Settings → Menu Button) и укажите URL страницы.
+1. Сделайте репозиторий публичным (на бесплатном тарифе GitHub Pages не работает для приватных): Settings → General → Danger Zone → Change visibility → Public.
+2. Включите Pages: Settings → Pages → Source: «Deploy from a branch», ветка `claude/inspiring-wright-ty5qy6`, папка `/ (root)` → Save. Через минуту-две приложение будет по адресу `https://ihaveham745-debug.github.io/Trash/`.
+3. В [@BotFather](https://t.me/BotFather): `/newbot` → придумайте имя и username бота.
+4. Там же: `/mybots` → ваш бот → Bot Settings → Menu Button → Configure menu button → вставьте URL из шага 2 и название кнопки, например «Играть».
+5. Откройте чат с ботом: кнопка «Играть» слева от поля ввода запускает приложение.
+
+Чтобы получить прямую ссылку вида `t.me/<бот>/<app>`, в BotFather выполните `/newapp`, выберите бота и укажите тот же URL.
